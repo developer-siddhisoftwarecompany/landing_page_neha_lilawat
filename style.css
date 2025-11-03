@@ -16,6 +16,7 @@
   background: #fff;
   padding: 20px 0;
   border-bottom: 1px solid #eee;
+  box-shadow: 0px 1px rgba(0, 0, 0, 0.12);
 }
 .nav {
   display: flex;
@@ -54,8 +55,9 @@ font-family: 'Poppins', sans-serif;
 /* HERO */
 .star1
 {
-    margin-left: 430px;
+    margin-left: 300px;
     margin-top: 30px;
+    position:absolute;
 }
 
 .hero-content {
@@ -76,12 +78,12 @@ font-family: 'Poppins', sans-serif;
 .btn-primary {
   background:rgba(0, 148, 238, 1);
   color: #fff;
-  padding: 12px 25px;
+  padding: 15px 45px;
     border: none;
   border-radius: 50px;
   text-decoration: none;
-  font-weight: 500;
     font-weight: bold;
+    font-size: 20px;
 
 }
 
@@ -116,7 +118,7 @@ font-family: 'Poppins', sans-serif;
   
 }
 .featured h2 {
-  font-size: 32px;
+  font-size: 46px;
   margin-bottom: 40px;
 }
 .featured h2 span {
@@ -171,23 +173,25 @@ font-family: 'Poppins', sans-serif;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 90px; /* space between image and text */
   padding: 60px 10%;
 
 }
 
 .about-img img {
-  width: 300px; /* adjust image size */
-  object-fit: cover;
+  width: 500px;
+  height:450px;
 }
-
+.about-text
+{
+  margin-left: 20px;
+}
 .about-text h2 {
   font-size: 32px;
-  margin-bottom: 20px;
+  
 }
 .about-text p {
-  margin-bottom: 15px;
-  color: #555;
+    color: rgba(32, 32, 32, 1);
+     font-size: 15px;
 }
 
 /* TESTIMONIALS */
@@ -196,7 +200,7 @@ font-family: 'Poppins', sans-serif;
   padding: 80px 0;
 }
 .testimonials h2 {
-  font-size: 32px;
+  font-size: 56px;
   margin-bottom: 40px;
 }
 .testimonials h2 span {
@@ -232,7 +236,7 @@ font-family: 'Poppins', sans-serif;
   text-align: center;
   padding: 50px 0px;
   font-family: 'Poppins', sans-serif;
-  margin-top: 10%;
+  margin-top: 40%;
 }
 
 .footer-content {
