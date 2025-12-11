@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ 
   <title>Siddhi Software Company</title>
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
@@ -11,15 +12,14 @@
   <!-- Header Section -->
   <header class="header">
     <div class="container nav">
-      <h1 class="logo"><img src ="siddhilogo.svg"></h1>
-      <div class="navthree">
-            
-                Aboutus 
-                Community
-                Privacy
-        
-        </div>  
-      <div style="display: flex; gap:25px;">
+      <img style="height: 140px; width: 140px; position: absolute; margin-left: 70px;" src ="siddhilogo.svg" class="logoo">
+      <div class="nav-links">
+       <a href="#">About us</a>
+       <a href="#">Community</a>
+        <a href="#">Privacy</a> 
+      </div>  
+     
+      <div class="hide" >
             <!-- App Store Button -->
              <a href="#" 
              style="display:inline-flex; align-items:center; border:2px solid rgba(0, 148, 238, 1); border-radius:12px; padding:8px 15px; text-decoration:none; color:#333; font-family:Arial, sans-serif; background-color:white;">
@@ -49,78 +49,103 @@
               </a>
         </div>
     </div>
-    </div>
+
+    <button class="open" onclick="openSidebar()">☰</button>
+  <div class="sidebar" id="sidebar">
+    <button class="close" onclick="closeSidebar()">✖</button>
+    <a href="#">About us</a>
+    <a href="#">Community</a>
+    <a href="#">Privacy</a>
+  </div>
+<script>
+function openSidebar() {
+  document.getElementById("sidebar").style.right = "0";
+}
+
+function closeSidebar() {
+  document.getElementById("sidebar").style.right = "-550px";
+
+  if (window.innerWidth <= 850) {
+    document.getElementById("sidebar").style.right = "-500px";
+  }
+}
+</script>
+</div>
   </header>
 
+    
   <!-- Hero Section -->
    <img src="Star.svg" class="star1">
     <div class="container hero-content">
       <div class="hero-text">
         <br><br>
-        <h2 style="color: rgba(0, 148, 238, 1); margin-top: 30px;">Innovative <br><span>Android Apps by <br>Siddhi Software <br>Company</span></h2>
+        <h2 style="color: rgba(0, 148, 238, 1); margin-top: 40px;">Innovative <br><span>Android Apps by <br>Siddhi Software <br>Company</span></h2>
         <p>Explore our range of powerful, user<br>friendly apps designed to enhance <br>your digital experience.</p>
+        <br>
         <a href="#" class="btn-primary">View Our Apps</a>
       </div>
       <div class="hero-img">
         <img src="fitbro.png" alt="App Preview"> </div>
         <div class="curved-box"></div>
+       
     </div>
     <img src="Star 2.svg">
-    <img style="position: absolute; margin-left: 1150px; margin-top:80px ;" src="Star 6.svg" >
-    <img style="position: absolute; margin-left: 840px; margin-top:70px ;" src="Group 30.svg">
-    <img style="position: absolute; margin-left: 770px; margin-top:140px ;" src="Star 5.svg">
-    <img style="position: absolute; margin-left:250px; margin-top:180px ;" src="Group 28.svg">
+    <img style="position: absolute; margin-left: 1300px; margin-top:80px ;" src="Star 6.svg" >
+    <img style="position: absolute; margin-left: 940px; margin-top:70px ;" src="Group 30.svg">
+    <img style="position: absolute; margin-left: 860px; margin-top:140px ;" src="Star 5.svg">
+    <img style="position: absolute; margin-left:320px; margin-top:180px ;" src="Group 28.svg">
 
-  <!-- Featured Apps -->
-       <img style="position: absolute; margin-left: 99px; margin-top:310px ;" src="image 6.svg">
-       <img style="position: absolute; margin-left: 500px; margin-top:310px ;" src="image 6.svg">
-       <img style="position: absolute; margin-left: 910px; margin-top:310px ;" src="image 6.svg">
-  <section class="featured">
-    <div class="container">
+  <!-- Featured Apps -->;
+    <section class="featured">
       <h2 style="margin-top: 100px;">Our Featured <span>Apps</span></h2>
-     <div style="gap:100px;"></div>
       <div class="app-grid">
+
         <div class="app-card">
-          <img src="phone bg.svg" alt="App Preview">
+          <img style="position:absolute;height:370px;width:370px;" src="image 6.svg">
+          <img src="phone bg.svg" >
+           <div class="Para">
           <h3>Tagofy - Geotag Map Camera</h3>
-          <p>Tagofy - Geotag GPS Camera :Capture & Relive <br> Every Moment with Precision.Tagofy - Geotag GPS <br>
-             Camera is the ultimate tool for photography<br>enthusiasts who to preserve...</p>
+          <p>Tagofy - Geotag GPS Camera :Capture & Relive Every Moment with Precision.Tagofy - Geotag GPS 
+             Camera is the ultimate tool for photography enthusiasts who to preserve...</p>
           <div class="stars">★  ★  ★  ★  ★</div>
           <br>
           <a href="#" class="btn-secondary">Download App</a>
         </div>
-
-        <div class="app-card">
-          <img src="phone bg.svg" alt="App Preview">
-          <h3>Tagely - Geotag Map Camera</h3>
-          <p>Tagofy - Geotag GPS Camera :Capture & Relive <br> Every Moment with Precision.Tagofy - Geotag GPS <br>
-             Camera is the ultimate tool for photography<br>enthusiasts who to preserve...</p>
-          <div class="stars">★  ★  ★  ★  ★</div>
-          <br>
-          <a href="#" class="btn-secondary">Download App</a>
         </div>
 
         <div class="app-card">
-          <img src="phone bg.svg" alt="App Preview">
-          <h3>Tagely - Geotag Map Camera</h3>
-           <p>Tagofy - Geotag GPS Camera :Capture & Relive <br> Every Moment with Precision.Tagofy - Geotag GPS <br>
-              Camera is the ultimate tool for photography<br>enthusiasts who to preserve...</p>         
-               <div class="stars">★  ★  ★  ★  ★</div>
-               <br>
-          <a href="#" class="btn-secondary">Download App</a>
+           <img style="position:absolute;height:370px;width:370px;" src="image 6.svg" class="exchange" >
+          <img src="phone bg.svg" class="exchange"  >
+          <div class="Paraa">
+            <h3>Tagely - Geotag Map Camera</h3>
+            <p>Tagofy - Geotag GPS Camera :Capture & Relive Every Moment with Precision.Tagofy - Geotag GPS 
+           Camera is the ultimate tool for photography enthusiasts who to preserve...</p>
+           <div class="stars">★  ★  ★  ★  ★</div>
+           <br>
+           <a href="#" class="btn-secondary">Download App</a>
+          </div>
+          </div>
+
+        <div class="app-card">
+          <img style="position:absolute;height:370px;width:370px;" src="image 6.svg">
+          <img src="phone bg.svg" >
+          <div class="Para">
+           <h3>Tagely - Geotag Map Camera</h3>
+           <p>Tagofy - Geotag GPS Camera :Capture & Relive <br> Every Moment with Precision.Tagofy - Geotag GPS
+             Camera is the ultimate tool for photography enthusiasts who to preserve...</p>         
+           <div class="stars">★  ★  ★  ★  ★</div>
+           <br>
+           <a href="#" class="btn-secondary">Download App</a>
+           </div>
         </div>
-         </div>
-        <br>
-      <a href="#" class="btn-primary center">View All Apps</a>
-    </div>
-  </section>
-            <img style="position: absolute ; margin-left: 20px;"  src="Star 9.svg">
+      </div>
+    </section>
+    <img style="position: absolute ; margin-left: 20px;"  src="Star 9.svg">
 
 
   
 
-  <!-- About Us -->
-   <br><br>
+   <!-- About Us -->
    <section class="about-section">
       <div class="about-img"><img src="Group 48095448.svg" alt="App UI"></div>
       <div class="about-text">
@@ -149,30 +174,89 @@
    </section>
 
     <!-- Testimonials -->
-     <img style="position: absolute; margin-left: 950px;" src="Group 48095447.svg">
-       <img style="position: absolute;" src="Rectangle 99.svg">
-       <img style="position: absolute; margin-left: 270px; margin-top:120px ;" src="Group 18.svg">
-       <img style="position: absolute; margin-left: 630px; margin-top:150px ;" src="Background illustration.svg">
+      <img style="position: absolute; margin-left: 1050px;" src="Group 48095447.svg">
+      <img style="position: absolute;" src="Rectangle 99.svg">
+      <img style="position: absolute; margin-left: 340px; margin-top:120px ;" src="Group 18.svg">
+      <img style="position: absolute; margin-left: 720px; margin-top:150px ;" src="Background illustration.svg">
 
   <section class="testimonials">
     <div class="container">
       <h2>What Our <span>Users Say</span></h2>
       <div class="testimonial-grid">
-        
-          <img src="1.svg" alt="User">
-          <img src="2.svg" alt="User">
-          <img src="3.svg" alt="User">
-          <img src="4.svg" alt="User">
-          <img style="position:absolute;margin-left: 1120px; margin-top: 470px;" src="Rectangle 98.svg">
-           <img style="position: absolute; height: 1200px;width: 1200px; margin-top: 270px;"src="Frame.svg">
+
+        <div class="one">
+          <p style="  font-size:20px;color: white;font-weight: bold;">Albert Flores</p>
+          <div class="star">★  ★  ★  ★  ★</div>
+                </div>
+          <img src="BG.svg" alt="User">
+          <div style=" margin-top: 430px;margin-left: 220px;" class="play-button">
+          <div class="triangle"></div>
+         </div>
+
+          <div class="two">
+          <p style="  font-size:20px;color: white;font-weight: bold;">Courtney Henry</p>
+          <div class="star">★  ★  ★  ★  ★</div>  
+         </div>
+         <div style=" margin-top: 430px;margin-left: 570px;" class="play-button">
+          <div class="triangle"></div>
+        </div>
+          <img src="BG (1).svg" alt="User">
+
+          <div class="three">
+          <p style="  font-size:20px;color: white;font-weight: bold;">Courtney Henry</p>
+          <div class="star">★  ★  ★  ★  ★</div>
+                </div>
+          <img src="BG (2).svg" alt="User">
+
+            <div class="set">
+              <div style="position: absolute; margin-top: 430px;margin-left:910px;" class="play-button">
+                <div class="triangle"></div>
+              </div>
+            </div>
+      
+
+          <div class="four">
+            <p style="  font-size:20px;color: white;font-weight: bold;">Albert Flores</p>
+            <div class="star">★  ★  ★  ★  ★</div>
+         </div>
+          <img src="image.svg" alt="User">
+
+          <div class="sett">
+            <div style="position: absolute; margin-top: 430px;margin-left: 1255px;" class="play-button">
+              <div class="triangle"></div>
+            </div>
+          </div>
+
+          <img style="position:absolute;margin-left: 1260px; margin-top: 490px;" src="Rectangle 98.svg">
       </div>
     </div>
     </section>
     
+
+    <!--black box-->
+    
+    <div class="blackbox">
+      
+     <img style="position: absolute; height: 300px; width: 300px; margin-top:210px ;" src="Ellipse 2157.svg">
+     <img style="position: absolute; height: 300px; width: 300px; margin-top:230px ;" src="Ellipse 2156.svg">
+     <img style="position: absolute; height: 300px; width: 300px; margin-top:250px ;" src="Ellipse 2155.svg">
+
+     <img style="position: absolute;margin-left:800px; margin-top: 30px; " src="Star 7.svg">    
+     <img style="position: absolute; margin-left:1053px; " src="Ellipse 2157.png">
+     <img style="position: absolute; margin-left:1020px; " src="Ellipse 2156.png">
+     <img style="position: absolute; margin-left:970px; " src="Ellipse 2155.png">
+     <img class="iphone" src="iPhone 13 Pro.svg">
+    
+     <p style="margin-left: 80px; margin-top: 80px;font-size: 48px;color: rgba(255, 255, 255, 1);">Ready To Get Started?</p>
+     <p style="margin-left: 80px; margin-top: 10px;font-size: 18px;color: rgba(255, 255, 255, 1);">Lorem Ipsum is Simply Dummy Text Of The Printing And <br> Typesetting Industry. </p>
+      <br><br><a  style="margin-left: 100px;" href="#" class="btn-primary">Download The Apps</a>
+
+    </div>
+
   <!-- Footer -->
   <footer class="footer">
     <div class="footer-content">
-      <div class="logo"><img src="Group 1.svg"></div>
+    <img style="position:relative;" src="Group 1.svg">
   
       <ul class="footer-links">
         <li><a href="#">About us</a></li>
@@ -185,7 +269,7 @@
         <a href="#"><img src="logo facebook.svg" alt="Twitter"></a>
         <a href="#"><img src="insta.svg" alt="Instagram"></a>
         <a href="#"><img src="git.svg" alt="Instagram"></a>
-        </div>
+      </div>
     </div>
     <br><br>
     <hr>
@@ -194,9 +278,5 @@
       Copyright © 2025 Siddhi Software Company. All Rights Reserved.
     </p>
   </footer>
-
-
-
 </body>
 </html>
-  
