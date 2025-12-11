@@ -1,0 +1,78 @@
+
+<html>
+<head>
+    <title>QR Code Generator</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+</head>
+<body>
+
+<h2>QR Code Generator</h2>
+
+<input type="text" id="qrText" placeholder="Type URL, phone number or text"><br><br>
+
+<label>QR Color:</label>
+<input type="color" id="qrColor" value="#000000">
+
+<label>Background:</label>
+<input type="color" id="bgColor" value="#ffffff">
+
+<br><br>
+<button onclick="generateQR()">Generate</button>
+<button onclick="downloadQR()">Download</button>
+<button onclick="shareQR()">Share</button>
+
+<div id="qrcode" style="margin-top:20px;"></div>
+
+<script>
+let qr;
+
+function generateQR() {
+    let text = document.getElementById("qrText").value;
+    let qrColor = document.getElementById("qrColor").value;
+    let bgColor = document.getElementById("bgColor").value;
+
+    document.getElementById("qrcode").innerHTML = ""; 
+
+    qr = new QRCode(document.getElementById("qrcode"), {
+        text: text,
+        width: 200,
+        height: 200,
+        colorDark: qrColor,
+        colorLight: bgColor
+    });
+}
+
+// -------------------- Download QR --------------------
+function downloadQR() {
+    const canvas = document.querySelector("#qrcode canvas");
+    const img = canvas.toDataURL("image/png");
+
+    const link = document.createElement("a");
+    link.href = img;
+    link.download = "qr-code.png";
+    link.click();
+}
+
+// -------------------- Share QR (mobile supported) --------------------
+async function shareQR() {
+    const canvas = document.querySelector("#qrcode canvas");
+    const imgData = canvas.toDataURL("image/png");
+
+    const res = await fetch(imgData);
+    const blob = await res.blob();
+    const file = new File([blob], "qr-code.png", { type: "image/png" });
+
+    if (navigator.share) {
+        navigator.share({
+            title: "QR Code",
+            text: "Here is your QR code.",
+            files: [file]
+        }).catch(err => console.log(err));
+    } else {
+        alert("Sharing not supported on this device.");
+    }
+}
+</script>
+
+</body>
+</html>
